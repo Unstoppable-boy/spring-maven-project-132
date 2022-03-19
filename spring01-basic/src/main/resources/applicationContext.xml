@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!--注册日期对象-->
+    <bean id="now" class="java.util.Date"/>
+
+    <!--注册日期格式对象-->
+    <bean id="dateFormat" class="java.text.SimpleDateFormat">
+        <constructor-arg value="yyyy-MM-dd HH:mm:ss"/>
+    </bean>
+
+    <!--注册学生对象-->
+    <bean id="student" class="spring_Ioc.Student">
+        <property name="name" value="王大"/>
+        <property name="age" value="18"/>
+        <property name="registTime" ref="now"/>
+    </bean>
+
+
+
+</beans>
