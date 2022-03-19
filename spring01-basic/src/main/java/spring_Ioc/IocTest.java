@@ -17,9 +17,7 @@ public class IocTest {
         //方式1：按名称索要
         Date now = (Date) context.getBean("now");
         System.out.println("now = "+now);
-        
- 
-       System.out.println();
+
 
 
         //方式2：按类型索要
