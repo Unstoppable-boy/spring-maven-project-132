@@ -12,6 +12,7 @@ public class IocTest {
 
         ApplicationContext context =
                 new ClassPathXmlApplicationContext("applicationContext.xml");
+        System.out.println(11111);
 
         //向Ioc容器索要对象，有2中方式
         //方式1：按名称索要
