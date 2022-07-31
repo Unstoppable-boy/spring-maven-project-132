@@ -31,6 +31,8 @@ public class IocTest {
         Student student = (Student) context.getBean("student");
         student.showInfo();
 
+        //物理机写的代码
+
     }
 
 }
