@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>BootStrap-Select</title>
+    <link rel="stylesheet" href="https://cdn.bootcss.com/twitter-bootstrap/3.3.7/css/bootstrap.min.css" />
+    <!--<link rel="stylesheet" href="https://cdn.bootcss.com/font-awesome/4.5.0/css/font-awesome.min.css" />-->
+    <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap-select/1.13.6/css/bootstrap-select.css" />
+
+    <script src="https://cdn.bootcss.com/jquery/1.11.1/jquery.min.js"></script>
+    <script src="https://cdn.bootcss.com/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="https://cdn.bootcss.com/bootstrap-select/1.13.6/js/bootstrap-select.js"></script>
+
+    <!--<link rel="stylesheet" href="twitter-bootstrap-3.3.7.min.css" />
+    <link rel="stylesheet" href="font-awesome-4.5.0.min.css" />
+    <link rel="stylesheet" href="bootstrap-select-1.13.6.css" />
+
+    <script src="https://cdn.bootcss.com/jquery/1.11.1/jquery.min.js"></script>
+    <script src="twitter-bootstrap-3.3.7.min.js"></script>
+    <script src="bootstrap-select-1.13.6.js"></script>-->
+</head>
+<body>
+<div class="page-content container">
+    <div class='page-body'>
+        <div class='panel panel-default'>
+            <div class="panel-heading"><h3 class='panel-title'>使用selectpicker类</h3></div>
+            <table class='table table-bordered'>
+                <thead>
+                <tr>
+                    <th width=35>No.</th>
+                    <th width="70%">描述</th>
+                    <th width="30%">选择框</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>普通标准单选框</td>
+                    <td>
+                        <select class="selectpicker">
+                            <option>Mustard</option>
+                            <option>Ketchup</option>
+                            <option>Relish</option>
+                        </select>
+                    </td></tr>
+                <tr>
+                    <td>2</td>
+                    <td>带下拉分组optgroup, 选中项显示对勾</td>
+                    <td>
+                        <select class="selectpicker" data-show-tick="false">
+                            <optgroup label="Picnic">
+                                <option>Mustard</option>
+                                <option>Ketchup</option>
+                                <option>Relish</option>
+                            </optgroup>
+                            <optgroup label="Camping">
+                                <option>Tent</option>
+                                <option>Flashlight</option>
+                                <option>Toilet Paper</option>
+                            </optgroup>
+                        </select>
+                    </td></tr>
+                <tr>
+                    <td>3</td>
+                    <td>多选，设置noneSelectedText为'--请选择--'</td>
+                    <td>
+                        <select class="selectpicker" data-none-selected-text="--请选择--" multiple>
+                            <option>Hot Dog, Fries and a Soda</option>
+                            <option>Burger, Shake and a Smile</option>
+                            <option>Sugar, Spice and all things nice</option>
+                        </select>
+                    </td></tr>
+                <tr>
+                    <td>4</td>
+                    <td>多选，设置下拉框右对齐，最多可选2项</td>
+                    <td>
+                        <select class="selectpicker" multiple data-max-options="2" data-dropdown-align-right = "true">
+                            <option>Hot Dog, Fries and a Soda</option>
+                            <option>Burger, Shake and a Smile</option>
+                            <option>Sugar, Spice and all things nice</option>
+                        </select>
+                    </td></tr>
+                <tr>
+                    <td>5</td>
+                    <td>多选，显示选中全部和取消选中按钮，并设置英文文本为中文</td>
+                    <td>
+                        <select class="selectpicker" multiple data-actions-box="true" data-deselect-all-text = '取消选中' data-select-all-text='选中全部'>
+                            <option>Mustard</option>
+                            <option>Ketchup</option>
+                            <option>Relish</option>
+                        </select>
+                    </td></tr>
+                <tr>
+                    <td>6</td>
+                    <td>多选，显示搜索框，可通过option data-tokens="ketchup mustard"来指定搜索关键字</td>
+                    <td>
+                        <select class="selectpicker"  multiple data-live-search="true" data-none-results-text="没找到相应记录{0}">
+                            <option data-tokens="ketchup mustard">Hot Dog, Fries and a Soda</option>
+                            <option data-tokens="mustard">Burger, Shake and a Smile</option>
+                            <option data-tokens="frosting">Sugar, Spice and all things nice</option>
+                        </select>
+                    </td></tr>
+                </tbody>
+                <tfoot>
+                <tr>
+                    <td>总结</td>
+                    <td colspan="2">
+                        1. 使用selectpicker插件时，需定义select的classs属性值为selectpicker。
+                        2. 常用属性：
+                        date-show-tick=true 选中显示对勾；
+                        data-none-selected-text="" 设置初始显示文本；
+                        multiple 可多选；
+                        data-max-options="2" 最多选2项；
+                        data-dropdown-align-right = "true" 下拉框右对齐；
+                        data-deselect-all-text = '取消选中'
+                        data-select-all-text='选中全部'
+                        data-actions-box="true" 设置英文文本为中文
+                        data-live-search="true" 显示搜索框
+                        data-none-results-text="没找到相应记录{0}"
+                    </td>
+                </tr>
+                </tfoot>
+            </table>
+        </div>
+        <div class="panel panel-default">
+            <div class="panel-heading"><h3 class='panel-title'>使用js来初始化</h3></div>
+            <table class='table table-bordered'>
+                <thead>
+                <tr>
+                    <th width=35>No.</th>
+                    <th width="70%">描述</th>
+                    <th width="30%">选择框</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>普通标准单选框 <button class='btn btn-sm btn-primary' type='button' onclick='make1()'>初始化</button></td>
+                    <td>
+                        <select class="form-control input-sm" id="bs-select1">
+                            <option>Mustard</option>
+                            <option>Ketchup</option>
+                            <option>Relish</option>
+                        </select>
+                    </td></tr>
+                <tr>
+                    <td>2</td>
+                    <td>带下拉分组optgroup, 选中项显示对勾 <button class='btn btn-sm btn-primary' type='button' onclick='make2()'>初始化</button></td>
+                    <td>
+                        <select class="form-control input-sm" id="bs-select2">
+                            <optgroup label="Picnic">
+                                <option>Mustard</option>
+                                <option>Ketchup</option>
+                                <option>Relish</option>
+                            </optgroup>
+                            <optgroup label="Camping">
+                                <option>Tent</option>
+                                <option>Flashlight</option>
+                                <option>Toilet Paper</option>
+                            </optgroup>
+                        </select>
+                    </td></tr>
+                <tr>
+                    <td>3</td>
+                    <td>多选，显示搜索框，可通过option data-tokens="ketchup mustard"来指定搜索关键字 <button class='btn btn-sm btn-primary' type='button' onclick='make3()'>初始化</button></td>
+                    <td>
+                        <select class="form-control input-sm" size=1 multiple id="bs-select3">
+                            <option data-tokens="ketchup mustard">Hot Dog, Fries and a Soda</option>
+                            <option data-tokens="mustard">Burger, Shake and a Smile</option>
+                            <option data-tokens="frosting">Sugar, Spice and all things nice</option>
+                        </select>
+                    </td></tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="panel panel-default">
+            <div class="panel-heading"><h3 class='panel-title'>API方法列表</h3></div>
+            <table class='table table-bordered'>
+                <thead>
+                <tr>
+                    <th width=35>No.</th>
+                    <th width="70%">描述</th>
+                    <th width="30%">选择框</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>单选框取值、赋值 <button class='btn btn-sm btn-primary' type='button' onclick='getval1()'>取值</button>
+                        <button class='btn btn-sm btn-primary' type='button' onclick='setval1()'>赋值</button></td>
+                    <td>
+                        <select class="form-control input-sm selectpicker" id="api-select1">
+                            <option>Mustard</option>
+                            <option>Ketchup</option>
+                            <option>Relish</option>
+                        </select>
+                    </td></tr>
+                <tr>
+                    <td>2</td>
+                    <td>多选框取值、赋值 <button class='btn btn-sm btn-primary' type='button' onclick='getval2()'>取值</button>
+                        <button class='btn btn-sm btn-primary' type='button' onclick='setval2()'>赋值</button></td>
+                    <td>
+                        <select class="form-control input-sm selectpicker" multiple id="api-select2">
+                            <option>Mustard</option>
+                            <option>Ketchup</option>
+                            <option>Relish</option>
+                            <option>Marcus</option>
+                            <option>Lmlxj</option>
+                        </select>
+                    </td></tr>
+                <tr>
+                    <td>3</td>
+                    <td>删除option,render和refresh比较, option增|删|selected改变需要调用refresh才生效 <button class='btn btn-sm btn-primary' type='button' onclick='del3()'>删除option</button>
+                        <button class='btn btn-sm btn-primary' type='button' onclick='render3()'>render</button>
+                        <button class='btn btn-sm btn-primary' type='button' onclick='refresh3()'>refresh</button>
+                    </td>
+                    <td>
+                        <select class="selectpicker form-control input-sm" id="api-select3">
+                            <optgroup label="Picnic">
+                                <option value="Mustard">Mustard</option>
+                                <option value="Ketchup">Ketchup</option>
+                                <option value="Relish">Relish</option>
+                            </optgroup>
+                            <optgroup label="Camping">
+                                <option value="Tent">Tent</option>
+                                <option value="Flashlight">Flashlight</option>
+                                <option value="Toilet Paper">Toilet Paper</option>
+                            </optgroup>
+                        </select>
+                    </td></tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+<script type="text/javascript">
+    function make1() {
+        $("#bs-select1").selectpicker();
+    }
+    function make2() {
+        $("#bs-select2").selectpicker({showTick: true});
+    }
+    function make3() {
+        $("#bs-select3").selectpicker({liveSearch: true, noneResultsText: "没找到相应记录{0}"});
+    }
+    function getval1() {
+        alert('selectpicker("val"): ' + $("#api-select1").selectpicker('val'));
+        alert('$("#api-select1").val(): ' + $("#api-select1").val());
+    }
+    function setval1() {
+        $("#api-select1").selectpicker('val', 'Ketchup');
+        // 或 $("#api-select1").val('Ketchup').selectpicker('refresh');
+    }
+    function getval2() {
+        alert('selectpicker("val"): ' + $("#api-select2").selectpicker('val'));
+        alert('$("#api-select1").val(): ' + $("#api-select2").val());
+    }
+    function setval2() {
+        $("#api-select2").selectpicker('val', ['Ketchup','Marcus']);
+        // $("#api-select2").val(['Ketchup','Marcus']).selectpicker('refresh');
+    }
+    function del3() {
+        $('#api-select3').find('[value=Ketchup]').remove();
+    }
+    function render3() {
+        $('#api-select3').selectpicker('render');
+    }
+    function refresh3() {
+        $('#api-select3').selectpicker('refresh');
+    }
+</script>
+</body>
+</html>
