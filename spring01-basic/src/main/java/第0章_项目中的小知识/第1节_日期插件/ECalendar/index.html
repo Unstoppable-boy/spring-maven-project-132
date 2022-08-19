@@ -57,7 +57,8 @@
 <script src="js/Ecalendar.jquery.js"></script>
 <script type="text/javascript">
 
-    Date.prototype.Format = function (fmt) { //author: meizz
+	//日期格式化
+    Date.prototype.Format = function (fmt) {
 
         var o = {
             "M+": this.getMonth() + 1, //月份
@@ -78,7 +79,7 @@
     };
 	var today = new Date().Format("yyyy-MM-dd");
 	console.log(today);
-    $("#ECalendar_case1").val(today);
+    $("#ECalendar_case1").val(today); //给日期选择框初始化赋值
 
 	$(function(){
 		$("#ECalendar_case1").ECalendar({
