@@ -1,4 +1,4 @@
-package 第1章_Java常用类库.第15节_定时调度;
+package 第1章_Java常用类库.第1_15节_定时调度;
 
 import java.util.Timer;
 import java.util.TimerTask;

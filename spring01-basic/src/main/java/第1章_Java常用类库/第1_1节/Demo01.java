@@ -1,4 +1,4 @@
-package 第1章_Java常用类库.第1至12节;
+package 第1章_Java常用类库.第1_1节;
 
 import java.math.BigInteger;
 import java.math.RoundingMode;

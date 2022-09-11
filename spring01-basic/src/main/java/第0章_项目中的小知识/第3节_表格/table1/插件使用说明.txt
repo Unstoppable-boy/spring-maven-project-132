@@ -1,0 +1,40 @@
+/*
+ *
+ *特别声明，该插件是以丶空白 编写的插件基础上修改的，原版链接:https://www.jq22.com/jquery-info22558
+ *
+*/
+
+1.该插件使用时，table需要定义三个参数：<table id="mytable" columnsEd="" addButton="add">
+	id：table对象
+	columnsEd：可编辑单元格列，为空代表全部，例："0,1,2,3"
+	addButton:绑定添加单元格id,为空不触发添加单元格事件
+
+js定义
+var table = SetEditable({
+	tabedId:'mytable,mytable2',//单页面多个表格需要编辑，传递多个table id参数
+	onEdit: function(row,values,tableid) {
+		//编辑后回调
+		console.log(row);
+		console.log(values);
+		console.log(tableid);
+	},
+	onBeforeDelete: function(row,values,tableid) {
+		//删除前回调
+		console.log(row);
+		console.log(values);
+		console.log(tableid);
+	},
+	onDelete: function(tableid) {
+		//删除后回调
+		console.log(tableid);
+	},
+	onAdd: function(tableid) {
+		//添加表格后回调
+		console.log(tableid);
+	}
+});
+
+
+<th class="hide">ID</th>
+<td class="hide">id</td>
+默认隐藏，这个是可以用来定义id参数值
