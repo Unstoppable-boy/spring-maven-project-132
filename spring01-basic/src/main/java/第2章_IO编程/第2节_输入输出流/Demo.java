@@ -1,4 +1,4 @@
-package 第1章_Java常用类库.第2_2节_输入输出流;
+package 第2章_IO编程.第2节_输入输出流;
 
 import java.io.*;
 

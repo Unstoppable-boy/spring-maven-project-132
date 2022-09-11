@@ -1,4 +1,4 @@
-package 第1章_Java常用类库.弟2_1节_文件操作类;
+package 第2章_IO编程.弟1节_文件操作类;
 
 import java.io.File;
 import java.io.IOException;
