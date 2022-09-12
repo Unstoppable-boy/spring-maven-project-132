@@ -1,4 +1,4 @@
-package 第4章_反射机制.第2节_反射与对象实例化.第2点_反射与工厂设计模式;
+package 第4章_反射机制.第3节_反射与对象实例化.第2点_反射与工厂设计模式;
 
 
 //图书接口
@@ -45,10 +45,10 @@ class Factory{
 //测试类
 public class TestBook{
     public static void main(String[] args) {
-        IBook book1 = Factory.getInstance("第4章_反射机制.第2节_反射与对象实例化.第2点_反射与工厂设计模式.MathBook");
+        IBook book1 = Factory.getInstance("第4章_反射机制.第3节_反射与对象实例化.第2点_反射与工厂设计模式.MathBook");
         book1.read();
 
-        IBook book2 = Factory.getInstance("第4章_反射机制.第2节_反射与对象实例化.第2点_反射与工厂设计模式.MusicBook");
+        IBook book2 = Factory.getInstance("第4章_反射机制.第3节_反射与对象实例化.第2点_反射与工厂设计模式.MusicBook");
         book2.read();
     }
 }
